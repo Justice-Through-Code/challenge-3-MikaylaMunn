@@ -1,14 +1,21 @@
 
 def stock_purchases():
-    amazon = 3000
-    apple = 100
-    fb = 250
-    google = 1400
-    msft = 200
+    stocks = {
+        "amazon" : 3000,
+        "apple" : 100,
+        "fb" : 250,
+        "google": 1400,
+        "msft": 200
+    }
+    # amazon = 3000
+    # apple = 100
+    # fb = 250
+    # google = 1400
+    # msft = 200
 
     # Given the prices above and a client's investment budget, how much stock can they buy?
     # 1.1 TODO: Ask the client's name (use the string: "What is your name? ") and save it into a variable
-    name = input('What is your name?')
+    name = input('What is your name? ')
     # 1.2 TODO: Ask the client how many dollars they would like to invest (use the string: "How much would you like to invest? $")
     # and save it into a variable
     money = int(input('How much would you like to invest? $'))
@@ -27,20 +34,25 @@ def stock_purchases():
     stocks = 0
     current_price = 0
     if stock_name == "Amazon":
-        stocks = money / amazon
-        current_price = amazon
+        x = stocks['amazon']
+        stocks = money / x
+        current_price = x
     elif stock_name == "Apple":
-        stocks = money/apple
-        current_price = apple
+        x = stocks['apple']
+        stocks = money/x
+        current_price = x
     elif stock_name == "Facebook":
-        stocks = money/fb
-        current_price = fb
+        x = stocks['fb']
+        stocks = money/x
+        current_price = x
     elif stock_name == "Google":
-        stocks = money/google
-        current_price= google
+        x = stocks['google']
+        stocks = money/x
+        current_price= x
     else:
-        stocks = money/msft
-        current_price = msft
+        x =stocks['msft']
+        stocks = money/x
+        current_price = x
     
         
 
@@ -48,3 +60,4 @@ def stock_purchases():
     # Use an f-string to print the result for the client, ala:
     # Alex has $5000 in savings and can buy 50 shares of Apple at the current price of $100.
     print(f'{name} has ${money} to invest and can buy {int(stocks)} shares of {stock_name} at the current price of ${current_price}.')
+stock_purchases()
